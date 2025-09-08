@@ -115,8 +115,8 @@
 * User mode is more restricted than kernel mode. It cannot run certain instructions (e.g.,
   instructions that allow direct access to hardware). It also cannot access certain regions of
   memory set by the code that runs in kernel mode.
-* This is different from normal user vs. super user. A super user is still a user, but with full
-  administrative privileges. A super user can do things that a normal user isn't allowed to do and
+* This is different from normal user vs. root user. A root user is still a user, but with full
+  administrative privileges. A root user can do things that a normal user isn't allowed to do and
   run programs that a normal user isn't allowed to run.
 
 ### The Linux Kernel Map

@@ -33,6 +33,10 @@
       memory space for the program so that the CPU can easily access the code and run it.
 * Programmers can use system calls to control processes.
     * Three basic system calls: `fork()`, `exec()`, and `wait()`.
+* Each process has its own address space:
+    * Changing a variable's value in one process doesn't affect any variables in the other process.
+    * A pointer in one process cannot access the memory of the other.
+    * Processes can only communicate with each other through the OS, and only if they both agree.
 
 ## Activity: `fork()`
 

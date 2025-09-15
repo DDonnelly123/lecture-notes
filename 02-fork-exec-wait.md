@@ -49,6 +49,7 @@
 * `fork()` returns a process ID (PID):
     * For the parent, `fork()` returns the process ID of the child (or -1 on failure)
     * For the child, `fork()` returns 0.
+* Any process can ask who their parent is, but the parent cannot ask who their child is
 
 ## Activity: `fork()`
 

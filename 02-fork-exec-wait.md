@@ -37,6 +37,18 @@
     * Changing a variable's value in one process doesn't affect any variables in the other process.
     * A pointer in one process cannot access the memory of the other.
     * Processes can only communicate with each other through the OS, and only if they both agree.
+ 
+## `fork()`
+
+* `fork()` creates a child process that is an identical copy of the calling process.
+    * It is called once, but returns twice: in the initial process (parent), just as we expect.
+      In the new process (child)!
+* Analogy: It's like waking up after being cloned.
+    * Are you the original person?
+    * Are you the clone?
+* `fork()` returns a process ID (PID):
+    * For the parent, `fork()` returns the process ID of the child (or -1 on failure)
+    * For the child, `fork()` returns 0.
 
 ## Activity: `fork()`
 

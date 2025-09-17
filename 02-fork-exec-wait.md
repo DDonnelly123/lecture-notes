@@ -66,6 +66,18 @@
 * When `exec()` is called, the Kernel comes and cleans up the process
   and then runs what exec wants it to do in the arguments.
 
+## `wait()`
+
+* `pid_t waitpid(pid_t pid, int *_Nullable wstatus, int options);`
+* pid
+    * PID to wait on or -1 for any child
+* wstatus
+    * Pointer to an int to store the child's exit status
+    * `_Nullable` tells the reader it's OK to be `NULL`. 
+* options
+    * we'll leave as 0; can specify non-blocking (don’t wait)
+      e.g., `WNOHANG`
+
 ## Activity: `fork()`
 
 * `fork()` creates a child process that is an identical copy of the calling process.

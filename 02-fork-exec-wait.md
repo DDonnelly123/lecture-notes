@@ -51,6 +51,21 @@
     * For the child, `fork()` returns 0.
 * Any process can ask who their parent is, but the parent cannot ask who their child is
 
+## `exec()`
+
+* `exec()` when called will:
+    * Remove the currently running program (from this process's memory)
+    * Load a new program into memory
+    * Start executing the new program
+* `exec()` completely replaces the calling process; It is replaced by a new program.
+    * The rest of a program won't get executed as it is replaced in memory
+* Analogy:
+    * If a process is a body
+    * `exec()` is a brain transplant
+* `exec()` runs through all the arguments passed to it, ideally through an array `execv()`
+* When `exec()` is called, the Kernel comes and cleans up the process
+  and then runs what exec wants it to do in the arguments.
+
 ## Activity: `fork()`
 
 * `fork()` creates a child process that is an identical copy of the calling process.

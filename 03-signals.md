@@ -5,6 +5,10 @@
 * `man 7 signal` for the overview.
     * Signals are notifications with specific meanings. Programs and the kernel can send signals to
       itself or other programs.
+     * Wonka Golden Ticket Example:
+        * Parent processes spawn children to look for golden ticket
+        * Parent creates a signal handler
+        * searches, and if it finds the golden ticket, it sends a signal to the parent (e.g., `kill(getppid()`)
     * Some examples (scroll down to `Standard signals`)
         * `SIGINT`: CTRL-C
         * `SIGKILL`: `kill` call

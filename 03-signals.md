@@ -26,6 +26,13 @@
           pointer to your signal handler.
 * When using signals, you need to use signal safe functions.
     * `man signal-safety` for the list of async-signal-safe functions
+* To receive a signal we must:
+     * write a function to handle a certain signal.
+     * register a handler with Linux using `sigaction()` - pass it a function pointer to our header
+     * `int sigaction(int signum, struct sigaction *act, struct sigaction, *oldact)`
+        * signum = signal to handle, such as `SIGSEGV`
+        * struct configuring our handler
+        * sigaction = gives us back the old handler
 
 ## Activity: `sigaction()`
 

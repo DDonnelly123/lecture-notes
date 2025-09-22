@@ -3,22 +3,24 @@
 ## Signals Overview
 
 * `man 7 signal` for the overview.
-    * Signals are notifications with specific meanings. Programs and the kernel can send signals to
+  * Signals are notifications with specific meanings. Programs and the kernel can send signals to
       itself or other programs.
-     * Wonka Golden Ticket Example:
-        * Parent processes spawn children to look for golden ticket
-        * Parent creates a signal handler
-        * searches, and if it finds the golden ticket, it sends a signal to the parent (e.g., `kill(getppid()`)
-    * Some examples (scroll down to `Standard signals`)
-        * `SIGINT`: CTRL-C
-        * `SIGKILL`: `kill` call
-        * `SIGSEGV`: Invalid memory reference
-        * Etc.
-    * How to send a signal (scroll up to `Sending a signal`)
+* Wonka Golden Ticket Example:
+  * Parent processes spawn children to look for golden ticket
+  * Parent creates a signal handler
+  * searches, and if it finds the golden ticket, it sends a signal to the parent (e.g., `kill(getppid()`)
+* Function Pointers
+  * They allow us to pass around and call functions
+* Some examples (scroll down to `Standard signals`)
+  * `SIGINT`: CTRL-C
+  * `SIGKILL`: `kill` call
+  * `SIGSEGV`: Invalid memory reference
+  * Etc.
+* How to send a signal (scroll up to `Sending a signal`)
         * `raise()`: to itself
         * `kill()`: to a process
         * Etc.
-    * Signal handler
+* Signal handler
         * `man sigaction`
         * The important part is filling out `struct sigaction`. The first member is the function
           pointer to your signal handler.

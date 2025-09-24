@@ -7,6 +7,11 @@
     * A question arises---how do you share the same CPU?
     * These days, there are many more processes you want to run than the # of cores. Thus, the same
       question remains.
+* Things that need to run:
+    * processes
+    * tasks
+    * jobs
+    * threads
 * You can read more about this topic in the following chapters of
   [OSTEP](https://pages.cs.wisc.edu/~remzi/OSTEP/). Keep in mind that OSTEP's discussions are much
   more in depth, which we consider out of scope for this course. Thus, you can use it as a reference

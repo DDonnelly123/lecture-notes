@@ -34,9 +34,15 @@
 * Ready queue and I/O queue
 
   ```bash
-  ------> ready queue --------------> CPU -> terminate
-      |                                |
-      \--- I/O done <--- I/O queue <---/
+      Disk-------> ready queue ------------------> CPU -> terminate
+              |                                    |
+              |                                    |
+              <----------preempted------------------
+              |                                    |
+              |                                    |
+              \--- I/O done <---I/O---- Executes <---/
+                               Queue      I/O
+                                       Operation
   ```
 
     * When a user launches `Process A`, it gets added to the ready queue.

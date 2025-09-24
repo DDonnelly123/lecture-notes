@@ -8,10 +8,10 @@
     * These days, there are many more processes you want to run than the # of cores. Thus, the same
       question remains.
 * Things that need to run:
-    * processes
-    * tasks
-    * jobs
-    * threads
+    * Processes
+    * Tasks
+    * Jobs
+    * Threads
 * You can read more about this topic in the following chapters of
   [OSTEP](https://pages.cs.wisc.edu/~remzi/OSTEP/). Keep in mind that OSTEP's discussions are much
   more in depth, which we consider out of scope for this course. Thus, you can use it as a reference
@@ -30,6 +30,7 @@
 * Context switch: stopping one process and starting/resuming another process.
     * This has overhead since it requires many complex steps to accomplish this. I.e., switching
       context frequently is not a good idea.
+    * It can resume exactly where it left off once it has another turn on the CPU
 * Ready queue and I/O queue
 
   ```bash
